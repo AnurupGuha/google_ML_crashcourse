@@ -21,3 +21,8 @@
  
 - Loss :
   - quantifing error in terms of L2 loss parameter where it is squared difference between target and prediction
+  - negative gradient of loss function with respect to the features will give the direction for optimum loss reduction
+  - the step size or which is also called learning rate is an important parameter
+   - very small learning rate is computionally costly
+   - a large learning rate may overshoot an optimum state
+   
