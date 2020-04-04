@@ -25,5 +25,10 @@
   - the step size or which is also called learning rate is an important parameter
     - very small learning rate is computionally costly
     - a large learning rate may overshoot an optimum state
+  - initialization plays an important role 
+
+- Gradient Descent :
+  - Stochastic gradient descent> the loss function update happens for every randomly selected sample
+  - Mini-batch gradient descent> the loss function gets updated based on the average taken over a set of samples
  
    
