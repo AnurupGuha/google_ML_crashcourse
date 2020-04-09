@@ -36,6 +36,7 @@
   - Mini-batch gradient descent> the loss function gets updated based on the average taken over a set of samples
   - for multiple features, the gradient will be a vector of partial derivatives with respect to weights
   - -(del)f denotes the direction of greatest decrease of f
+  - therefore gradient descent algorithm relies on -(del)f
    
 Note:
 - For linear regression problems, starting values of the weights and baises are not important
