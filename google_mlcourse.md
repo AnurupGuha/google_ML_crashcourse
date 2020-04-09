@@ -37,6 +37,7 @@
   - for multiple features, the gradient will be a vector of partial derivatives with respect to weights
   - -(del)f denotes the direction of greatest decrease of f
   - therefore gradient descent algorithm relies on -(del)f
+  - gradients are calculated for all the weights (wi) and biases (bi)
    
 Note:
 - For linear regression problems, starting values of the weights and baises are not important
