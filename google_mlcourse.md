@@ -38,6 +38,8 @@
   - -(del)f denotes the direction of greatest decrease of f
   - therefore gradient descent algorithm relies on -(del)f
   - gradients are calculated for all the weights (wi) and biases (bi)
+  - gradient descent algorithms multiply the gradient by a scalar known as the learning rate (step size)
+  - the next point then is at a distance of (the gradient times the learning rate)
    
 Note:
 - For linear regression problems, starting values of the weights and baises are not important
