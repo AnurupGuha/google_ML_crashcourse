@@ -63,3 +63,6 @@ Steps:
 - update the weights and the biases and perform the previous steps
 - the model converges when the loss function changes very slowly 
 
+Tasks:
+- look for gradient descent algorithm in Python
+- try to customize it for a specific use
