@@ -46,6 +46,9 @@
 Note:
 - For linear regression problems, starting values of the weights and baises are not important
 - Typically a regression problem yields convex loss vs. weight plot
+- the ideal learning rate in 1D is (1/(f(x)''))
+- for higher dimensional problems, the ideal learning rate is the inverse of the Hessian
+- Learn about Hessian
 
 Steps:
 - start with an initial set of weights and biases
