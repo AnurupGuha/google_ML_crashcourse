@@ -37,6 +37,7 @@
    
 Note:
 - For linear regression problems, starting values of the weights and baises are not important
+- Typically a regression problem yields convex loss vs. weight plot
 
 Steps:
 - start with an initial set of weights and biases
