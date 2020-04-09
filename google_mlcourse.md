@@ -34,5 +34,14 @@
 - Gradient Descent :
   - Stochastic gradient descent> the loss function update happens for every randomly selected sample
   - Mini-batch gradient descent> the loss function gets updated based on the average taken over a set of samples
- 
    
+Note:
+- For linear regression problems, starting values of the weights and baises are not important
+
+Steps:
+- start with an initial set of weights and biases
+- for the given value of the feature set, compute the prediction function value (y')
+- compute the loss function value based on the label and prediction function
+- update the weights and the biases and perform the previous steps
+- the model converges when the loss function changes very slowly 
+
