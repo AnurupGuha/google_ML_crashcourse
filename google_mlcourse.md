@@ -40,6 +40,8 @@
   - gradients are calculated for all the weights (wi) and biases (bi)
   - gradient descent algorithms multiply the gradient by a scalar known as the learning rate (step size)
   - the next point then is at a distance of (the gradient times the learning rate)
+  - learning rate is an example of a hyperparameter
+  - hyperparameters are the knobs that programmers tweak in ML algorithms
    
 Note:
 - For linear regression problems, starting values of the weights and baises are not important
