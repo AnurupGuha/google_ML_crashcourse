@@ -32,8 +32,13 @@
   - initialization plays an important role 
 
 - Gradient Descent :
-  - Stochastic gradient descent> the loss function update happens for every randomly selected sample
+  - Stochastic gradient descent (SGD)> the loss function update happens for every randomly selected sample
+    - the batch size is 1
+    - it is noisy but works given enough iteration
   - Mini-batch gradient descent> the loss function gets updated based on the average taken over a set of samples
+    - the batch size is between 10 to 1000
+    - mini-batch SGD reduces the amount of noise in SGD but is still more efficient that full-batch
+    - full-batch usually have redundant data
   - for multiple features, the gradient will be a vector of partial derivatives with respect to weights
   - -(del)f denotes the direction of greatest decrease of f
   - therefore gradient descent algorithm relies on -(del)f
@@ -42,6 +47,7 @@
   - the next point then is at a distance of (the gradient times the learning rate)
   - learning rate is an example of a hyperparameter (usually learning rate is between 0 and 1)
   - hyperparameters are the knobs that programmers tweak in ML algorithms
+  - batch size is another hyperparameter
    
 Note:
 - For linear regression problems, starting values of the weights and baises are not important
