@@ -63,6 +63,20 @@ Steps:
 - update the weights and the biases and perform the previous steps
 - the model converges when the loss function changes very slowly 
 
+Tuning Hyperparameters:
+ - For basic problems, we have batch size, epoch number, and learning rate as the tuning hyperparameters
+ - epoch number is different from iterations, wherein, at each epoch we can have one or more iterations based on whether the    mini-batch size overlaps with the full batch size
+     - if mini-batch size is equal to the full batch size, we have one iteration per epoch
+     - if mini-batch size is smaller than full batch size, we have (full-batch size/mini-batch size) iterations
+ - tuning of hyperparameters is specific to each ML problem, and batch-size typically depends on the number of samples          (population size/sample size)
+ - if the loss curve doesn't appear to converge, increase the number of epochs
+ - if the loss curve has ups and downs,change or reduce the learning rate
+ - usually mini-batch size (also known in general as batch size) is in powers of 2. Nevertheless, try odd numbers as well.
+ - beware of false convergence (just made-up the word). Basically, the loss curve seems to converge but actually settles on    a sub-optimal value 
+
 Tasks:
 - look for gradient descent algorithm in Python
 - try to customize it for a specific use
+
+Crazy Ideas:
+ - experiment with complex neuron values 
