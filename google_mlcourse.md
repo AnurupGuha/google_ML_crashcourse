@@ -80,3 +80,20 @@ Tasks:
 
 Crazy Ideas:
  - experiment with complex neuron values 
+ 
+Numpy:
+  - It is a python library for creating and manipulating vectors and matrices
+  - to import Numpy module > import numpy as np
+  - np.array is used to create matrices:
+    - 1D matrix containing five elements > matrix_1D_example = np.array([1.2, 3, 4, 5.6, 8.3])
+    - 2D matrix (3x2) containing six elements > matrix_2D = np.array([[6, 5], [11, 7], [4, 8]])
+    - notice the extra pair of square brackets in the 2D matrix definition
+    - to create a matrix with all zeros > np.zeros
+    - to create a matric with all ones > np.ones
+    - to create a vector of integers in sequence > np.arange(6, 12)    # notice that 12 doesn't appear in the sequence
+  - np.random.randint is used to generate random integers between a low and high value:
+    - random_integers_bandlimited = np.random.randint(low=50, high=101, size(6))
+    - notice that the highest generated integer with be one less than the high argument
+  - np.random.random is used to generate random floating-point values between 0 and 1:
+    - random_floatingpoint = np.random.random([8])
+  - 
