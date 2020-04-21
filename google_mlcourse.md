@@ -96,4 +96,7 @@ Numpy:
     - notice that the highest generated integer with be one less than the high argument
   - np.random.random is used to generate random floating-point values between 0 and 1:
     - random_floatingpoint = np.random.random([8])
-  - 
+  - Numpy uses a technique called broadcasting technique wherein matrix operations become easier
+    - smaller dimension matrices are automatically scaled up to match the matrix with higher dimension
+    - this takes care of dimensional compatibility
+    
