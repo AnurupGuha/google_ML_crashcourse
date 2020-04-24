@@ -100,3 +100,25 @@ Numpy:
     - smaller dimension matrices are automatically scaled up to match the matrix with higher dimension
     - this takes care of dimensional compatibility
     
+  - importing Numpy and pandas modules:
+    - import numpy as np
+    - import pandas as pd
+    
+  - DataFrames are the defacto data structure in the pandas API
+    - like an in-memory spreadsheet, a DataFrame stores data in cells
+    - A DataFrame has named columns and numbered rows
+    
+  - Creating a simple DataFrame:
+    - my_data = np.array([[0, 3], [10, 7], [20, 9], [30, 14], [40, 15]])   # np.array is called to create a 5x2 Nympy array
+    - column_names = ['temperature', 'activity']   # a Python list is created to hold the names of the columns
+    - my_dataframe = pd.DataFrame(data = my_data, columns = column_names)   # class pd.DataFrame is instantiated 
+    - my_dataframe['adjusted'] = my_dataframe['activity'] + 2   # adding a new column to the existing pandas DataFrame
+  
+  - Isolating specific rows, columns in a DataFrame:
+    - print(my_dataframe.head(3), '\n')    # prints rows #0, #1, and #2
+    - print(my_dataframe.iloc[[2]], '\n')   # prints row #2
+    - print(my_dataframe[1:4], '\n')   # prints rows #1 to #3
+    - print(my_dataframe.loc[row_number,'column_name'])   # identifies a specific element
+    - print(my_dataframe['column_name'])   # prints a specific column
+    
+    
