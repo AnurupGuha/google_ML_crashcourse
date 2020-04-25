@@ -131,14 +131,11 @@ Note:
     - The mantra is to fit the data well but also as simple as possible
     - Machine learning's goal is to predict well on new data drawn from a (hidden) true probability distribution. 
     
-    - Ideally we would like to train our model on a data sample and know that it is going to do well
-      on new draws of data samples from a hidden distribution
+    - Ideally we would like to train our model on a data sample and know that it is going to do well on new draws of data samples from a hidden distribution
       
-    - We are not concerned with the process which generates data, rather, we work with data samples generated
-      from a process
+    - We are not concerned with the process which generates data, rather, we work with data samples generated from a process
       
-    - Test set methodology: We pull one draw of data from a distribution and we train on that. That is our training set
-      We take another draw of data from that distribution which we call as a test set.
+    - Test set methodology: We pull one draw of data from a distribution and we train on that. That is our training set. We take another draw of data from that distribution which we call as a test set.
         - Basic assumptions:
           - examples are drawn independently and identically (i.i.d) at random from a given distribution
           - The distribution remains stationary
