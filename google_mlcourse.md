@@ -122,7 +122,7 @@ Numpy:
     - print(my_dataframe['column_name'])   # prints a specific column
     
     
-  Note:
+Note:
     - Low loss for a given dataset doesn't necessarily mean that the model is doing good
     - Adaptation to a new dataset is important for model performance
     - Overfitting a model for a given dataset is not good for generalization
