@@ -130,7 +130,9 @@ Note:
 - Overfitting is caused by making model more complex than necessary
 - The mantra is to fit the data well but also as simple as possible
 - Machine learning's goal is to predict well on new data drawn from a (hidden) true probability distribution. 
+- Ockham's razor in machine learning: The less complex an ML model, the more likely that a good empirical result is not just due to the pecularities of the sample.
 - Ideally we would like to train our model on a data sample and know that it is going to do well on new draws of data samples from a hidden distribution
+- A dataset can be divided into two: training set (a subset to train a model), and a test set (a subset to test the model)
 - We are not concerned with the process which generates data, rather, we work with data samples generated from a process
 - Test set methodology: We pull one draw of data from a distribution and we train on that. That is our training set. We take another draw of data from that distribution which we call as a test set.
     - Basic assumptions:
