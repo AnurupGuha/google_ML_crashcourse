@@ -185,3 +185,8 @@ Test set and Training set methodology:
        - Test loss = 0.286; Training loss = 0.150; Difference = 0.136
      - learning rate = 0.01; epochs = 301; ame data parameters as before;
        - Test loss = 0.260; Training loss = 0.160; Difference = 0.100
+   
+   - outcome from examples:
+     - reducing learning rate reduces the difference between the Training loss and Test loss
+     - increasing the batch size slighlty reduces the difference
+     - reducing Training data percentage to 10% increases both the losses and difference
