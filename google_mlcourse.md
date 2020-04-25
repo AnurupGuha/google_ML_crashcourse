@@ -140,4 +140,22 @@ Note:
      - The distribution remains stationary
      - The data is taken from the same distribution: including traning, validation, and tests
           
-          
+Test set and Training set methodology:
+ - Test set must meet the following two conditions:
+   - is large enough to yield statistically meaningful results
+   - is representative od the dataset as a whole. That means, the training and test sets should have similar characteristics
+   - example: (changing the learning rate)
+    - learning rate = 3; epochs = 300; traning data percentage = 50%; Noise = 80; Batch size = 1; 
+     - Test loss = 0.278; Training loss = 0.208; Difference  = |test loss - training loss| = 0.07
+    - learning rate = 1; epochs = 302; samee data parameters as before;
+     - Test loss = 0.262; Training loss = 0.208; Difference = 0.054
+    - learning rate = 0.3; epochs = 305; same data parameters as before;
+     - Test loss = 0.299; Training loss = 0.213; Difference = 0.086
+    - learning rate = 0.1; epochs = 300; same data parameters as before;
+     - Test loss = 0.227; Training loss = 0.181; Difference = 0.046
+    - learning rate = 0.03; epochs = 296; same data parameters as before;
+     - Test loss = 0.220; Training loss = 0.176; Difference = 0.044
+    - learning rate = 0.01; epochs = 301; same data parameters as before;
+     - Test loss = 0.211; Training loss = 0.173; Difference = 0.038
+     
+    
