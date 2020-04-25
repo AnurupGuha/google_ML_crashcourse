@@ -158,4 +158,16 @@ Test set and Training set methodology:
      - learning rate = 0.01; epochs = 301; same data parameters as before;
        - Test loss = 0.211; Training loss = 0.173; Difference = 0.038
      
-    
+   - example: (changing learning rate and the batch size)
+     - learning rate = 3; epochs = 308; batch size = 10; Training data percentage = 50%; Noise = 80
+       - Test loss = 0.263; Training loss = 0.204; Difference = 0.059
+     - learning rate = 1; epochs = 300; same data parameters as before;
+       - Test loss = 0.252; Training loss = 0.188; Difference = 0.064
+     - learning rate = 0.3; epochs = 300; same data parameters as before:
+       - Test loss = 0.222; Training loss = 0.176; Difference = 0.046
+     - learning rate = 0.1; epochs = 302; same data parameters as before:
+       - Test loss = 0.212; Training loss = 0.173; Difference = 0.039
+     - learning rate = 0.03; epochs = 305; same data parameters as before:
+       - Test loss = 0.208; Training loss = 0.172; Difference = 0.036
+     - learning rate = 0.01; epochs = 306; same data parameters as before:
+       - Test loss = 0.207; Training loss = 0.172; Difference = 0.035
