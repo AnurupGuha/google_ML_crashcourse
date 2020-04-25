@@ -190,3 +190,5 @@ Test set and Training set methodology:
      - reducing learning rate reduces the difference between the Training loss and Test loss
      - increasing the batch size slighlty reduces the difference
      - reducing Training data percentage to 10% increases both the losses and difference
+     
+   Start from Validation set (35 mins)
