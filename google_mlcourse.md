@@ -205,3 +205,5 @@ Test set and Training set methodology:
        - shuffled_df = my_df.reindex(np.random.permutation(my_df.index))
      - shuffling reduces the difference between the traning loss and validation loss
      - The test loss then will be similar to the training loss and validation loss
+
+- start with Representation (35 min)
