@@ -120,6 +120,7 @@ Numpy:
     - print(my_dataframe[1:4], '\n')   # prints rows #1 to #3
     - print(my_dataframe.loc[row_number,'column_name'])   # identifies a specific element
     - print(my_dataframe['column_name'])   # prints a specific column
+    - new_df['Column_name'] /= scaling_factor   # scaling operation
     
     
 Note:
@@ -198,4 +199,7 @@ Test set and Training set methodology:
      - A good performance on validation set and not on a test set may indicate overfitting
      - The strategy is to pick the model that does best on the validation set, and then test on test set
      - Test sets and validation sets wear out with repeated use. That is, the more you use the same data to make decisions          about hyperparameter settings, the less confidence will be on the model to do well on new test set
-     - 
+     - Validation set is carved out from a given training set (is it always?)
+     - One must randomize the training set to eliminate any bias that may result on differences in training and validation          set
+     - to shuffte a data set, one can do:
+       - shuffled_df = my_df.reindex(np.random.permutation(my_df.index))
