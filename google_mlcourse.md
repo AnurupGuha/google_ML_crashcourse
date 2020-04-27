@@ -203,3 +203,5 @@ Test set and Training set methodology:
      - One must randomize the training set to eliminate any bias that may result on differences in training and validation          set
      - to shuffte a data set, one can do:
        - shuffled_df = my_df.reindex(np.random.permutation(my_df.index))
+     - shuffling reduces the difference between the traning loss and validation loss
+     - The test loss then will be similar to the training loss and validation loss
