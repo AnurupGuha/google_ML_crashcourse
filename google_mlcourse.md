@@ -191,5 +191,8 @@ Test set and Training set methodology:
      - increasing the batch size slighlty reduces the difference
      - reducing Training data percentage to 10% increases both the losses and difference
      
-   - Note:
-     - The more often we train our model on the given test set, the more the rist of overfitting the model to the one test          set
+   - Validation set:
+     - The more often we train our model on the given test set, the more the risk of overfitting the model to the one test          set
+     - The effect of overfitting on test set can be minimized by testing the model on a third set, which is the validation          set
+     - We then try to minimize the difference in performance of the model on the validation set and test set
+     - A good performance on validation set and not on a test set may indicate overfitting
