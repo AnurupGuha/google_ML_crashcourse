@@ -193,6 +193,9 @@ Test set and Training set methodology:
      
    - Validation set:
      - The more often we train our model on the given test set, the more the risk of overfitting the model to the one test          set
-     - The effect of overfitting on test set can be minimized by testing the model on a third set, which is the validation          set
+     - The effect of overfitting on test set can be minimized by first testing the model on a third set, which is the              validation set
      - We then try to minimize the difference in performance of the model on the validation set and test set
      - A good performance on validation set and not on a test set may indicate overfitting
+     - The strategy is to pick the model that does best on the validation set, and then test on test set
+     - Test sets and validation sets wear out with repeated use. That is, the more you use the same data to make decisions          about hyperparameter settings, the less confidence will be on the model to do well on new test set
+     - 
