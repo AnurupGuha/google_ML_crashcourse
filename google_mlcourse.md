@@ -191,4 +191,5 @@ Test set and Training set methodology:
      - increasing the batch size slighlty reduces the difference
      - reducing Training data percentage to 10% increases both the losses and difference
      
-   Start from Validation set (35 mins)
+   - Note:
+     - The more often we train our model on the given test set, the more the rist of overfitting the model to the one test          set
