@@ -207,3 +207,4 @@ Test set and Training set methodology:
      - The test loss then will be similar to the training loss and validation loss
 
 - start with Representation (35 min)
+  - https://developers.google.com/machine-learning/crash-course/representation/cleaning-data
