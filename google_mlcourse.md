@@ -206,5 +206,12 @@ Test set and Training set methodology:
      - shuffling reduces the difference between the traning loss and validation loss
      - The test loss then will be similar to the training loss and validation loss
 
-- start with Representation (35 min)
-  - https://developers.google.com/machine-learning/crash-course/representation/cleaning-data
+  - Representation
+    - https://developers.google.com/machine-learning/crash-course/representation/cleaning-data
+    - take data from heterogeneous data sources and create feature vectors from it
+    - raw data doesn't come to us as feature vectors
+    - The process of extracting features from raw data is called feature engineering
+    - If we see a string value, we can often translate that into a feature vector by using a one-hot encoding
+    - A good feature should occur with a non-zero value at least a handful of times in our data set
+    - If a feature with a non-zero value occurs only extremely rarely or even once, its probably not a good feature to use,       and should be filtered out in a pre-processing step
+    - 
