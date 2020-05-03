@@ -212,6 +212,8 @@ Test set and Training set methodology:
     - raw data doesn't come to us as feature vectors
     - The process of extracting features from raw data is called feature engineering
     - If we see a string value, we can often translate that into a feature vector by using a one-hot encoding
+    - One-hot encoding comprises of a binary vector whose length is equal to the number of elements in vocabulary, and for a       specific possible value, the corresponding binary vector element is set to 1 and all others are set to zero.
+    - Categorical features have a discrete set of posible values. Collection of these possible values is vocabulary
     - A good feature should occur with a non-zero value at least a handful of times in our data set
     - If a feature with a non-zero value occurs only extremely rarely or even once, its probably not a good feature to use,       and should be filtered out in a pre-processing step
-    - 
+    
