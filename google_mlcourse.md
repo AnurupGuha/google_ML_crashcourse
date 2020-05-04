@@ -216,5 +216,11 @@ Test set and Training set methodology:
     - One-hot encoding extends to numeric data that may not be appropriate to get directly multiplied with by weights
     - A good feature should occur with a non-zero value at least a handful of times in our data set
     - If a feature with a non-zero value occurs only extremely rarely or even once, its probably not a good feature to use,       and should be filtered out in a pre-processing step
-    - https://developers.google.com/machine-learning/crash-course/representation/cleaning-data
+    - Histograms, and statistical features like maximum and minimum values, mean, median, standard deviation can inform           about the features of the data set
+    - Binning of data in a dataset adds in more sub-categories which may help in indentifying more intrinsic characteristics       about the data
+    - Binning data by quantiles is a good approach, which enables equal distribution of data in each bin
+    - scaling feature values means converting their natural range to a standard range of 0 to 1, or, -1 to +1.
+    - Scaling helps gradiant decent to converge more quickly, avoids ill-conditioning and, helps the model learn appropriate       weight for each feature
+   - Start from feature crosses
+    
     
