@@ -221,6 +221,20 @@ Test set and Training set methodology:
     - Binning data by quantiles is a good approach, which enables equal distribution of data in each bin
     - scaling feature values means converting their natural range to a standard range of 0 to 1, or, -1 to +1.
     - Scaling helps gradiant decent to converge more quickly, avoids ill-conditioning and, helps the model learn appropriate       weight for each feature
-   - Start from feature crosses
+   
+  - Feature crosses
+    - A feature cross is a synthetic or derived feature formed by multiplying (crossing) two or more features. Cross               combinations of features can provide predictive abilities beyond the capabilities of the individual features
+    - In other words, feature crossing (for example, [AxB]) helps us to learn nonlinearity in a linear model using a               synthetic feature
+    - A feature cross is a synthetic feature that encodes nonlinearity in the feature space by multiplying two or more input       features together. The term cross comes from cross product.
+    - y = b + w1x1 + w2x2 + w3(x1*x2) = b + w1x1 + w2x2 + w3x3
+    - When A and B represent boolean features, such as bins, the resulting crosses can be extremely sparse
+    - Feature crosses help us to incorporate nonlinear learning into a linear learner
+    - linear models scale well to massive data, but without feature crosses, the expressibility of these models would be           limited
+    - using feature crosses + massive data (and deep neural networks) is one efficient way for learning highly complex             models 
+    - Supplementing scaled linear models with feature crosses has traditionally been an efficient way to train on massive-         scale data sets
+    - In practice, ML models seldom cross continuous features. However, ML models do frequently cross one-hot feature             vectors
+    - Crossing a feature vector of side nx1 and another feature vector of size mx1, creates a synthetic feature vector of         size (n*m)x1
+    - The model output surface for a linear model with synthetic features resembles a nonlinear shape
     
+  Start with programming excercise within feature crosses.
     
