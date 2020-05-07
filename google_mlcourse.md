@@ -96,6 +96,10 @@ Numpy:
     - notice that the highest generated integer with be one less than the high argument
   - np.random.random is used to generate random floating-point values between 0 and 1:
     - random_floatingpoint = np.random.random([8])
+    
+  - shuffling a dataset:
+    - train_df = train_df.reindex(np.random.permutation(train_df.index))
+    
   - Numpy uses a technique called broadcasting technique wherein matrix operations become easier
     - smaller dimension matrices are automatically scaled up to match the matrix with higher dimension
     - this takes care of dimensional compatibility
@@ -236,5 +240,14 @@ Test set and Training set methodology:
     - Crossing a feature vector of side nx1 and another feature vector of size mx1, creates a synthetic feature vector of         size (n*m)x1
     - The model output surface for a linear model with synthetic features resembles a nonlinear shape
     
-  Start with programming excercise within feature crosses.
+    - Feature column creation:
+      - tf.feature_column method represents a single feature, or a single feature cross, or a single synthetic feature in a         desired way
+      - for representing a single feature as floating-point values, call tf.feature_column.numeric_column
+      - for representing a single feature as a series of buckets or bins, call tf.feature_column.bucketized_column
+      - for example, to create a numeric feature column to represent latitude:
+         - latitude = tf.feature_column.numeric_column("latitude")
+         - feature_columns = []  # an empty list is created to hold all feature columns
+         - feature_columns.append(latitude)
+   
+    - Start from Regularization
     
