@@ -249,5 +249,40 @@ Test set and Training set methodology:
          - feature_columns = []  # an empty list is created to hold all feature columns
          - feature_columns.append(latitude)
    
-    - Start from Regularization
+    - Regularization: Simplicity
+      - If we use a model with too many crosses, we give the model opportunity to fit to the noise in the training data,             often at the cost of making the model perform badly on test data
+      - Regularization - not trusting the examples in training data too much
+      - Regularization is done to avoid overfitting
+        - Early stopping: ending training before the model fully reaches convergence
+        - Trying to penalize model complexity - also known as structural risk minimiation
+          - Model complexity can be done by prefering smaller weights
+            - done using L2 regularization (a.k.a ridge regularization)
+              - In this penalization strategy, we penalize the sum of the squared values of the weights
+              - A loss function with L2 regularization:
+                - TrainingLoss + (lambda)*(w1^2 + w2^2 + w3^2 + .... + wn^2)
+                - The second term (regularization term) in the loss function doesn't depend on the data
+                - (lambda) dictates the balance between getting the examples right and keeping the model simple
+                - Lamba is known as regularization rate
+                - Lamba is used to tune the overall impact of the regularization term
+                - For a model complexity as a function of weights, a feature weight with a high abosolute value is more                       complex than a feature weight with a low absolute value
+                - In L2 regularization, weights close to zero have little effect on model complexity, while outlier weights                   can have a huge impact
+                - regularization is minimally required when traning data and test data are similar
+                - when there is not much of a training data, or when the training data and test data are kind of different,                   then regularization is required a lot
+                - L2 regularization has the following effect on a model:
+                  - encourages weight values towards 0 (but not exactly zero)
+                  - encourages the mean of the weights toward 0, with a Normal distribution
+                - increasing Lambda value strengthens the regularization effect
+                - The ideal value of Lambda produces a model that generalizes well to new, previously unseen data. This                       ideal value of Lambda is data-dependent, and so, will require tuning
+                - including and/or increasing regularization rate reduces test loss, while training loss increases. This is                   expected, as we have added an extra term to the loss function to penalize complexity. Ultimately, all that                   matters is test loss, as that's the true measure of the model's ability to make good predictions on new                     data
+                - including and/or increasing regularization rate reduces the difference between training loss and test loss
+                
+      - Learning rate and L2 regularization:
+        - Strong L2 regularization values tend to drive feature weights closer to zero
+        - Lower learning rates (with early stopping) aften produce the same effect 
+        - Simultaneously tweaking learning rate and Lamba may have profound effects
+        
+    - start with logistic regression
+        
+    
+    - Note: A generalization curve shows the loss for both the traning set and validation set against the number of traning       iterations
     
