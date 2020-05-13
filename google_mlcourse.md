@@ -280,9 +280,39 @@ Test set and Training set methodology:
         - Strong L2 regularization values tend to drive feature weights closer to zero
         - Lower learning rates (with early stopping) aften produce the same effect 
         - Simultaneously tweaking learning rate and Lamba may have profound effects
-        
-    - start with logistic regression
-        
+                
     
     - Note: A generalization curve shows the loss for both the traning set and validation set against the number of traning       iterations
     
+    - Logistic Regression:
+      - It is a prediction method that gives us well calibrated probabilities
+         - Logistic regression is an extremely efficient mechanism for calculating probabilities
+         - we can use the returned probability either "as is", or convert it to a binary category
+         - in many cases, we will map the logistic regression output into the solution to a binary classification problem
+      - We take our linear model and stick it in to a sigmoid function
+      - sigmoid gives us a bounded value between zero and one
+      - we train the model using a LogLoss function, not a squared loss function
+        - the loss function for linear regression is squared loss
+        - the loss function for logistic regression is LogLoss, defined as:
+          - LogLoss = summation(-ylog(y') - (1-y)log(1-y')
+            - where, y is the label in a labeled example. Since, this is logistic regression, every value of y is between 0               and 1
+            - y' is the predicted value (somewhere between 0 and 1)
+      - LogLoss resembles Shanon's entropy measure from information theory
+      - The asymptotes of the sigmoid function are important in terms of learning
+      - These asymptotes make it necessary to incorporate regularization in to learning, otherwise, on a given dataset the           model will try to fit our data ever more closely. (trying to drive the losses to near zero)
+      - L2 regularization can be extremely helpful here to make sure that the weights don't go crazy out of bounds
+      - Linear Logistic regression is very fast, extremely efficient to train, and efficient to make predictions
+        - it scales well to massive data
+        - can be used for very low latency predictions
+        
+      - A sigmoid function is given as:
+        - y = 1/(1 + e^-(z)) 
+        - y lies between 0 and 1, and approaches 0 and 1 asymtotically
+        - If z represents the output of the linear layer of a model trained with logistic regression, then sigmoid(z) will             yield a value (a probability) between 0 and 1. y in that case is the output of the logistic regression model for             the given example
+        - z = b + w1x1 + w2x2 + w3x3 +....+wnxn
+        - z is also known as the log-odds because the inverse of the sigmoid states that z can be defined as the log of the           probability of the "1" label (something happens) divided by the probability of the "0" label (something doesn't             occur)
+          - z = log(y/(1-y))
+          
+        
+      
+
