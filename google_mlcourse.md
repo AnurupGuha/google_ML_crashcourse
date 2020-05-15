@@ -313,6 +313,33 @@ Test set and Training set methodology:
         - z is also known as the log-odds because the inverse of the sigmoid states that z can be defined as the log of the           probability of the "1" label (something happens) divided by the probability of the "0" label (something doesn't             occur)
           - z = log(y/(1-y))
           
-        
+    - Classification:
+      - we can use logistic regression as a foundation for classification by taking the probability outputs and applying a           fixed classification threshold to them
+      - to quantify classification performance, one classical way is to use accuracy
+        - accuracy is the fraction of predictions we got right
+        - accuracy breaks down when there is class imbalance in a problem
+      - for class-imbalance problems, it is useful to separate out different kinds of errors as:
+        - True positives; False positives; False negatives; True negatives
+        - we can combine these ideas into a couple of different metrics:
+          - Precision: (true positives)/(all positive predictions)
+          - Recall: (true positives)/(all actual positives)
+          - these two metrics are often at tension and doing well at both of them is important
+          - it is important to know both precision and recall before assessing the quality of a given model
+          - raising the classification threshold typically increases precision: however, precision is not guaranteed to                 increase monotonically as we raise the threshold
+          - precision and recall are both well-defined when there is one specific classification threshold that we have                 chosen
+          - we have a metric that looks at the performance of the model across a range of classification threshold. It is               known as receiver operating characteristics (ROC) curve
+            - the idea is that we evaluate every possible classification threshold and look at the true positive and false                 positive rates at that threshold
+            - area under the ROC curve has an interesting probabilistic interpretation
+            
+        - prediction bias:
+          - taking the sum of all of the things we predict and comparing them to the sum of all of the things we observe
+          - we would like the expected values that we predict, to be equal to the observed values
+            - if they are not, then we say that the model has some bias
+            - a bias of zero means that the sum of the predictions is equal to the sum of the observations
+            - if our model does not have a zero bias, it is a cause for concern. we need to then debug our model. We need to               then slice the data and see what areas the model is not doing a good job of having a zero bias
+            - However, having a zero bias is ins itelf not sufficient to tell us that the model is perfect
+          - we can look at a more fine grained view of bias by looking at a calibration plot
+          
+          - start from classification: thresholding
       
 
