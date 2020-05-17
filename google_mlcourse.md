@@ -317,9 +317,10 @@ Test set and Training set methodology:
       - we can use logistic regression as a foundation for classification by taking the probability outputs and applying a           fixed classification threshold to them
       - to quantify classification performance, one classical way is to use accuracy
         - accuracy is the fraction of predictions we got right
-        - accuracy breaks down when there is class imbalance in a problem
+        - accuracy breaks down when there is class imbalance in a problem, where there is a significant disparity between             the number of positive and negative labels
       - for class-imbalance problems, it is useful to separate out different kinds of errors as:
         - True positives (TP); False positives (FP); False negatives (FN); True negatives (TN)
+        - accuracy = (number of correct predictions)/(total number of predictions) = (TP+TN)/(TP+TN+FP+FN);
         - we can combine these ideas into a couple of different metrics:
           - Precision: (TP)/(TP + FP)
             - In general, raising the classification threshold reduces FP, thus raising precision
