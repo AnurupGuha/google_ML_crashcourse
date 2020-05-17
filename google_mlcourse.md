@@ -322,9 +322,12 @@ Test set and Training set methodology:
         - True positives (TP); False positives (FP); False negatives (FN); True negatives (TN)
         - we can combine these ideas into a couple of different metrics:
           - Precision: (TP)/(TP + FP)
+            - In general, raising the classification threshold reduces FP, thus raising precision
           - Recall: (TP)/(TP + FN)
             - raising classification threshold will cause the number of TP to decrease or stay the same, and will cause the               number of FN to increase or stay the same. Thus recall will either stay constant or decrease
-          - these two metrics are often at tension and doing well at both of them is important
+          - In general, a model that outperforms another model on both precision and recall is likely the better model
+          - these two metrics are often at tension and doing well at both of them is important. 
+          - improving precision typically reduces recall and vice-versa.
           - it is important to know both precision and recall before assessing the quality of a given model
           - raising the classification threshold typically increases precision: however, precision is not guaranteed to                 increase monotonically as we raise the threshold
           - precision and recall are both well-defined when there is one specific classification threshold that we have                 chosen
@@ -341,6 +344,6 @@ Test set and Training set methodology:
             - However, having a zero bias is ins itelf not sufficient to tell us that the model is perfect
           - we can look at a more fine grained view of bias by looking at a calibration plot
           
-          - start from classification: thresholding
+          - start from classification: ROC curve and AUC
       
 
