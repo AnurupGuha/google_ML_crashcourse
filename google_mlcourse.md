@@ -319,10 +319,11 @@ Test set and Training set methodology:
         - accuracy is the fraction of predictions we got right
         - accuracy breaks down when there is class imbalance in a problem
       - for class-imbalance problems, it is useful to separate out different kinds of errors as:
-        - True positives; False positives; False negatives; True negatives
+        - True positives (TP); False positives (FP); False negatives (FN); True negatives (TN)
         - we can combine these ideas into a couple of different metrics:
-          - Precision: (true positives)/(all positive predictions)
-          - Recall: (true positives)/(all actual positives)
+          - Precision: (TP)/(TP + FP)
+          - Recall: (TP)/(TP + FN)
+            - raising classification threshold will cause the number of TP to decrease or stay the same, and will cause the               number of FN to increase or stay the same. Thus recall will either stay constant or decrease
           - these two metrics are often at tension and doing well at both of them is important
           - it is important to know both precision and recall before assessing the quality of a given model
           - raising the classification threshold typically increases precision: however, precision is not guaranteed to                 increase monotonically as we raise the threshold
