@@ -314,12 +314,16 @@ Test set and Training set methodology:
           - z = log(y/(1-y))
           
     - Classification:
-      - we can use logistic regression as a foundation for classification by taking the probability outputs and applying a           fixed classification threshold to them
+      - we can use logistic regression as a foundation for classification by taking the probability outputs and applying a           fixed classification threshold (also called the decision threshold) to them
+      - tuning a threshold for logistic regression is different from tuning hyperparameters such as learning rate. Part of           selecting a threshold is assessing how much the cost of a mistake will be
       - to quantify classification performance, one classical way is to use accuracy
         - accuracy is the fraction of predictions we got right
         - accuracy breaks down when there is class imbalance in a problem, where there is a significant disparity between             the number of positive and negative labels
       - for class-imbalance problems, it is useful to separate out different kinds of errors as:
         - True positives (TP); False positives (FP); False negatives (FN); True negatives (TN)
+        - consider that "spam" is a positive class, and "not spam" is a negative class
+        - TP is an outcome where the model correctly predicts the positive class. TN is an outcome where the model correctly           predicts the negative class
+        - FP is an outcome where the model incorrectly predicts the positive class. FN is an outcome where the model                   incorrectly predicts the negative class
         - accuracy = (number of correct predictions)/(total number of predictions) = (TP+TN)/(TP+TN+FP+FN);
         - we can combine these ideas into a couple of different metrics:
           - Precision: (TP)/(TP + FP)
