@@ -348,7 +348,9 @@ Test set and Training set methodology:
             - AUC measures the entire area underneath the entire ROC curve from (0,0) to (1,1)
             - AUC provides an aggregate measure of performance across all possible classification thresholds
             - AUC is the probability that the model ranks a random positive example more highly than a random negative                    example
-            
+            - AUC represents the probability that a random positive example is positioned to the right of a random negative               example
+            - AUC ranges in value from 0 to 1
+            - AUC is classification-th
         - prediction bias:
           - taking the sum of all of the things we predict and comparing them to the sum of all of the things we observe
           - we would like the expected values that we predict, to be equal to the observed values
