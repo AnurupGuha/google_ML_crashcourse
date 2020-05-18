@@ -350,7 +350,8 @@ Test set and Training set methodology:
             - AUC is the probability that the model ranks a random positive example more highly than a random negative                    example
             - AUC represents the probability that a random positive example is positioned to the right of a random negative               example
             - AUC ranges in value from 0 to 1
-            - AUC is classification-th
+            - AUC is classification-threshold-invariant. It measures the quality of the model's predictions irrespective of               what classification threshold chosen
+            - AUC is scale-invariant. It measures how well predictions are ranked, rather than their absolute values
         - prediction bias:
           - taking the sum of all of the things we predict and comparing them to the sum of all of the things we observe
           - we would like the expected values that we predict, to be equal to the observed values
