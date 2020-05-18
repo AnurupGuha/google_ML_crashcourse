@@ -337,8 +337,17 @@ Test set and Training set methodology:
           - raising the classification threshold typically increases precision: however, precision is not guaranteed to                 increase monotonically as we raise the threshold
           - precision and recall are both well-defined when there is one specific classification threshold that we have                 chosen
           - we have a metric that looks at the performance of the model across a range of classification threshold. It is               known as receiver operating characteristics (ROC) curve
+            - ROC curve is a graph showing the performance of a classification model at all classification thresholds
+            - an ROC curve plots two parameters: true positive rate (TPR), and false positive rate (FPR)
+            - TPR is a synonym for recall
+            - FPR is: (FP)/(FP+TN)
+            - an ROC curve plots TPR and FPR at different classification thresholds
+            - lowering the classification threshold classifies more items as positive, thus increasing both FP and TP
             - the idea is that we evaluate every possible classification threshold and look at the true positive and false                 positive rates at that threshold
-            - area under the ROC curve has an interesting probabilistic interpretation
+            - area under the ROC curve (AUC) has an interesting probabilistic interpretation
+            - AUC measures the entire area underneath the entire ROC curve from (0,0) to (1,1)
+            - AUC provides an aggregate measure of performance across all possible classification thresholds
+            - AUC is the probability that the model ranks a random positive example more highly than a random negative                    example
             
         - prediction bias:
           - taking the sum of all of the things we predict and comparing them to the sum of all of the things we observe
