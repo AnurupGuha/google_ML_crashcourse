@@ -390,10 +390,13 @@ Test set and Training set methodology:
               - train_df_norm = (train_df - train_df_mean)/train_df_std
               - train_df_norm.head()
             - consider a feature with mean = 60; and standard deviation  = 10; A raw value of 75 will then have a Z-score =               (75-mean)/standard deviation = +1.5
+            - A raw value of 38 will have a Z-score of -2.2
             - in classification problems, the label for every example must be either 0 or 1. 
               - to convert True and False to 1 and 0, call the pandas DataFrame function "astype(float)"
+                - train_df_norm["median_house_value_high"] = (train_df["median_house_value"] > threshold).astype(float)
               
-            - A raw value of 38 will have a Z-score of -2.2
+   - start from:
+   https://colab.research.google.com/github/google/eng-edu/blob/master/ml/cc/exercises/binary_classification.ipynb?utm_source=mlcc&utm_campaign=colab-external&utm_medium=referral&utm_content=binary_classification_tf2-colab&hl=en#scrollTo=d4kWfWA8bhKW
             
           
 
