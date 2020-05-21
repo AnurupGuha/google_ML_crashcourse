@@ -378,8 +378,22 @@ Test set and Training set methodology:
             - the system created is a brittle one which needs to be kept up-to-date
           - if possible, avoid calibration layers
           - a good model will usually have near-zero bias. That doesn't mean that a low prediction bias makes a model good
-          - 
-          
-          - start from classification: bucketing and prediction bias
+          - logistic regression predicts a value between 0 and 1. Labeled examples are either exactly 0 or exactly 1
+          - to determine prediction bias, we need not one but a bucket of examples. That is, prediction bias for logisitic               regression makes sense only when grouping enough examples together to be able to then compare a predicted value             with the observed values.          
+          - buckets can be made by either linearly breaking up the target predictions, or by forming quantiles
+        
+        - Binary classification model:
+          - we should normalize features in a multi-feature model. The value of each feature should cover roughly the same               range
+          - the following code cell normalizes datasets by converting each raw value to its Z-score. A Z-score is the number             of standard deviations from the mean for a particular raw value
+              - train_df_mean = train_df.mean()
+              - train_df_std = train_df.std()
+              - train_df_norm = (train_df - train_df_mean)/train_df_std
+              - train_df_norm.head()
+            - consider a feature with mean = 60; and standard deviation  = 10; A raw value of 75 will then have a Z-score =               (75-mean)/standard deviation = +1.5
+            - in classification problems, the label for every example must be either 0 or 1. 
+              - to convert True and False to 1 and 0, call the pandas DataFrame function "astype(float)"
+              
+            - A raw value of 38 will have a Z-score of -2.2
+            
           
 
