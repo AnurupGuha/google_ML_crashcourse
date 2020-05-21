@@ -352,15 +352,34 @@ Test set and Training set methodology:
             - AUC ranges in value from 0 to 1
             - AUC is classification-threshold-invariant. It measures the quality of the model's predictions irrespective of               what classification threshold chosen
             - AUC is scale-invariant. It measures how well predictions are ranked, rather than their absolute values
+              - AUC is based on relative predictions, so any transformation of the predictions that preserves the relative                   ranking has no effect on AUC. This is not the case with other metrics such as squared error, logloss, or                     prediction bias
         - prediction bias:
           - taking the sum of all of the things we predict and comparing them to the sum of all of the things we observe
+          - logistic regression predictions should be unbiased
           - we would like the expected values that we predict, to be equal to the observed values
+          - average of predictions should be almost equal to average of observations
             - if they are not, then we say that the model has some bias
+            - prediction bias is a quantity that measures how far apart those two averages are.
+              - prediction bias = average of predictions - average of labels in data set
+              - Note: prediction bias is a different quantity than bias (b in wixi + b)
             - a bias of zero means that the sum of the predictions is equal to the sum of the observations
             - if our model does not have a zero bias, it is a cause for concern. we need to then debug our model. We need to               then slice the data and see what areas the model is not doing a good job of having a zero bias
             - However, having a zero bias is ins itelf not sufficient to tell us that the model is perfect
-          - we can look at a more fine grained view of bias by looking at a calibration plot
+            - we can look at a more fine grained view of bias by looking at a calibration plot
+          - possible root causes of prediction bias are:
+            - incomplete feature set
+            - noisy data set
+            - buggy pipeline
+            - biased training sample
+            - overly strong regularization
+          - we may be tempted to correct prediction bias by post-processing the learned model, i.e., by adding a calibration             layer that adjusts the model's output to reduce the prediction bias
+          - however, adding a calibration layer is a bad idea for the following reasons:
+            - we are fixing the symptom rather than the cause
+            - the system created is a brittle one which needs to be kept up-to-date
+          - if possible, avoid calibration layers
+          - a good model will usually have near-zero bias. That doesn't mean that a low prediction bias makes a model good
+          - 
           
-          - start from classification: ROC curve and AUC
-      
+          - start from classification: bucketing and prediction bias
+          
 
