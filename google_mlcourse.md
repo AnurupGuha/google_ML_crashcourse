@@ -396,7 +396,7 @@ Test set and Training set methodology:
                 - train_df_norm["median_house_value_high"] = (train_df["median_house_value"] > threshold).astype(float)
               
    - start from:
-   https://colab.research.google.com/github/google/eng-edu/blob/master/ml/cc/exercises/binary_classification.ipynb?utm_source=mlcc&utm_campaign=colab-external&utm_medium=referral&utm_content=binary_classification_tf2-colab&hl=en#scrollTo=d4kWfWA8bhKW
+   
             
           
 
