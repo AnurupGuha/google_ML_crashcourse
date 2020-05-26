@@ -398,6 +398,8 @@ Test set and Training set methodology:
    - Regularization: Sparcity
      - sparse feature crosses may lead to over-fitting and substantial increase in RAM requirement which may possibly slow          down runtime
      - we want to regularize in a way which also reduces model size/memory usage
+       - in a high-dimensional sparse vector, it would be nice to encourage weights to drop exactly to zero, where possible.
+         A weight of exactly zero essentially removes the corresponding feature from the model. Zeroing out the features              will save RAM and may reduce noise (over-fitting) in the model
        - we will zero out some of the weights and therefore, avoiding particular crosses
        - we would like to expicitely zero out weights - also known as L0 regularization
        - L0 regularization will penalize for having a weight that was not zero
@@ -408,7 +410,17 @@ Test set and Training set methodology:
          - it penalizes the sum of the absolute values of the weights
          - by doing this, the model is still encouraged to be very sparse
        - L2 regularization would also drive the weights to be small, but won't make them exactly zero.
-       
+       - In other words, L2 and L1 penalize weights differently:
+         - L2 penalizes weight^2
+         - L1 penalizes abs(weight)
+       - Consequently, L2 and L1 have different derivatives:
+         - the derivative of L2 is 2*weight
+           - One can think of the derivative of L2 as a force that removes x% of weight everytime. At any rate, L2 does not              normally drive weights to zero
+           
+         - the derivative of L1 is a constant whose value is independent of weight
+           - One can think of the derivative of L1 as a force that subtracts some constant from the weight everytime. Thanks              to absolute values, L1 has a discontinuity at 0, which causes subtaction results that cross 0 to become zeroed              out.
+        
+         - L1 regularization, penalizing the absolute value of all the weights, turns out to be quite efficient for wide                models
          
        
             
