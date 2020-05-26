@@ -422,7 +422,7 @@ Test set and Training set methodology:
         
          - L1 regularization, penalizing the absolute value of all the weights, turns out to be quite efficient for wide                models
          
-       
+       - start from Regularization for sparsity: playground exercise
             
           
 
