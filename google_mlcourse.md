@@ -402,10 +402,12 @@ Test set and Training set methodology:
        - we would like to expicitely zero out weights - also known as L0 regularization
        - L0 regularization will penalize for having a weight that was not zero
          - its hard to optimize as it is not convex (non-convex optimization)
+         - it refers to the count-based approach where the count of non-zero coefficient values in a model is penalized
+         - count-based approach would turn a convex optimization problem into a non-convex optimization problem
        - Instead, L0 regularization is relaxed to L1 regularization
          - it penalizes the sum of the absolute values of the weights
          - by doing this, the model is still encouraged to be very sparse
-       - L2 regularization would also drive the weights towards zero, but won't make them exactly zero.
+       - L2 regularization would also drive the weights to be small, but won't make them exactly zero.
        
          
        
