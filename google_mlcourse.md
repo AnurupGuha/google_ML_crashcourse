@@ -395,8 +395,20 @@ Test set and Training set methodology:
               - to convert True and False to 1 and 0, call the pandas DataFrame function "astype(float)"
                 - train_df_norm["median_house_value_high"] = (train_df["median_house_value"] > threshold).astype(float)
               
-   - start from:
-   
+   - Regularization: Sparcity
+     - sparse feature crosses may lead to over-fitting and substantial increase in RAM requirement which may possibly slow          down runtime
+     - we want to regularize in a way which also reduces model size/memory usage
+       - we will zero out some of the weights and therefore, avoiding particular crosses
+       - we would like to expicitely zero out weights - also known as L0 regularization
+       - L0 regularization will penalize for having a weight that was not zero
+         - its hard to optimize as it is not convex (non-convex optimization)
+       - Instead, L0 regularization is relaxed to L1 regularization
+         - it penalizes the sum of the absolute values of the weights
+         - by doing this, the model is still encouraged to be very sparse
+       - L2 regularization would also drive the weights towards zero, but won't make them exactly zero.
+       
+         
+       
             
           
 
