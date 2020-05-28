@@ -422,7 +422,16 @@ Test set and Training set methodology:
         
          - L1 regularization, penalizing the absolute value of all the weights, turns out to be quite efficient for wide                models
          
-       - start from Regularization for sparsity: playground exercise
+       - L2 and L1 regularization comparison:
+         - For L2 regularization, increasing the regularization rate decreases the difference between test and training loss
+         - In case of L1 regularization, the difference of training and test loss is much lower
+         - For both L2 and L1 regularization, increasing the lambda decreases the significant weights
+         - In L2 regularization, the individual weights never go down to zero
+         - In L1 regularization, the individual weights for a number features become exactly zero
+         - For L1 regularization, a lambda of 1 makes all the weights to go to zero (always the case?)
+         - For L1 regularization, a lambda > 1 produces even smaller weight values for significant weights (always?)         
+         - 
+         
             
           
 
