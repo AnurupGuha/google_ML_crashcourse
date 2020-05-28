@@ -430,7 +430,12 @@ Test set and Training set methodology:
          - In L1 regularization, the individual weights for a number features become exactly zero
          - For L1 regularization, a lambda of 1 makes all the weights to go to zero (always the case?)
          - For L1 regularization, a lambda > 1 produces even smaller weight values for significant weights (always?)         
-         - 
+         
+       - L1 regularization may cause the following kinds of features to get a weight of exactly 0:
+         - weakly informative features
+         - strongly informative features on different scales
+         - informative features strongly correlated with other similarly informative features
+       - Nevertheless, L1 regularization tends to reduce the number of features, and decrease the model size
          
             
           
