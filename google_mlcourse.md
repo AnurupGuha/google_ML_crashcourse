@@ -438,7 +438,7 @@ Test set and Training set methodology:
        - Nevertheless, L1 regularization tends to reduce the number of features, and decrease the model size
          
             
-    - Neural Networks:
+   - Neural Networks:
       - we would like the model in someway to learn the nonlinearities by themselves without us having to specify them               manually
       - for this we need a model with some additional structure
       - we stick in nonlinearity between the hidden layers, known as nonlinear transformation layer
@@ -474,3 +474,4 @@ Test set and Training set methodology:
       - back propagation essentially allows us to do gradient descent in this non-convex optimization in a reasonably               efficient manner
       - neural networks are not necessarily always better than feature crosses, but neural networks do offer a flexible             alternative that works well in many cases
     
+  start from playground exercises
