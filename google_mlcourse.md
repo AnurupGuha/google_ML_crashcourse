@@ -438,5 +438,19 @@ Test set and Training set methodology:
        - Nevertheless, L1 regularization tends to reduce the number of features, and decrease the model size
          
             
-          
+    - Neural Networks:
+      - we would like the model in someway to learn the nonlinearities by themselves without us having to specify them               manually
+      - for this we need a model with some additional structure
+      - we stick in nonlinearity between the hidden layers, known as nonlinear transformation layer
+      - a nonlinear transformation layer is also known as activation function
+      - nonlinear transformationlayer can go at the output of any of the hidden nodes
+      - one common nonlinearity that is used is called RELU 
+      - RELU is rectified linear unit
+      - RELU takes in a linear function and chops off the portion which lies in the region <=0 and makes that portion 0
+      - RELU is a simple nonlinear function, which allows us to create nonlinear models
+      - RELU gives state-of-the-art results for wide number of problems
+      - Other nonlinear functions include sigmoid or tanh
+      - this is what deep neural nets do
+        - they do specially good job at complex data including image data, audio data and video data
+        
 
