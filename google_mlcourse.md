@@ -443,14 +443,34 @@ Test set and Training set methodology:
       - for this we need a model with some additional structure
       - we stick in nonlinearity between the hidden layers, known as nonlinear transformation layer
       - a nonlinear transformation layer is also known as activation function
+      - we can pipe each hidden layer node through a nonlinear function
+      - the value of each node in a preceding hidden layer is transformed by a nonlinear function before being passed on to         the weighted sums of the next layer
       - nonlinear transformationlayer can go at the output of any of the hidden nodes
-      - one common nonlinearity that is used is called RELU 
+      - after adding an activation function, adding layers has more impact
+      - stacking nonlinearities on nonlinearities lets us model very complicated relationship between the inputs and the             predicted outputs
+      - one common nonlinearity that is used is called ReLU 
       - RELU is rectified linear unit
-      - RELU takes in a linear function and chops off the portion which lies in the region <=0 and makes that portion 0
-      - RELU is a simple nonlinear function, which allows us to create nonlinear models
-      - RELU gives state-of-the-art results for wide number of problems
+      - F(x) = max(0,x)
+      - ReLU takes in a linear function and chops off the portion which lies in the region <=0 and makes that portion 0
+      - ReLU is a simple nonlinear function, which allows us to create nonlinear models
+      - ReLU gives state-of-the-art results for wide number of problems
+      - the superiority of ReLU is based on empirical findings, probably driven by ReLU having a more useful range of               responsiveness
       - Other nonlinear functions include sigmoid or tanh
+      - In fact, any mathematical function can serve as an activation function
+      - If sigma is our activation function, then the value of a node in the network is:
+         - sigma*(w*x+b)
+      
+      - A neural network comprises of:
+         - a set of nodes, analogous to neurons, organized in layers
+         - a set of weights representing the connections between each neural network layer and the layer beneath it
+         - a set of biases, one for each node
+         - an activation function that transforms the output of each node in a layer. Different layers may have different              activation functions
+      
       - this is what deep neural nets do
+        - we can create arbitrarily complex neural network
         - they do specially good job at complex data including image data, audio data and video data
-        
-
+      - when we train these neural nets, we are in a non convex optimization, so initialization may matter
+      - the method that is used to train neural nets, is a variant of gradient descent, called back propagation
+      - back propagation essentially allows us to do gradient descent in this non-convex optimization in a reasonably               efficient manner
+      - neural networks are not necessarily always better than feature crosses, but neural networks do offer a flexible             alternative that works well in many cases
+    
