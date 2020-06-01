@@ -475,3 +475,10 @@ Test set and Training set methodology:
       - neural networks are not necessarily always better than feature crosses, but neural networks do offer a flexible             alternative that works well in many cases
     
       - increasing the number of neurons in a single hidden layer improves redundancy, and increases the chance of the model         converging towards a good model
+      - a deeper neural net can model the data set better than the first hidden layer alone
+        - individual neurons in the second layer can model more complex shapes, by combining neurons in the first layer
+        - while adding the second hidden layer can still model the data set better than the first hidden layer alone, it               might make more sense to add more nodes to the first layer to let more lines be part of the kit from which the               second layer builds its shapes
+        - a model with 1 neuron in the first hidden layer cannot learn a good model no matter how deep the neural net is
+        - by making a neural net large, with lots of neurons in hidden layers and more hidden layers, we have given the               model enough space to start overfitting on the noise in the training data set
+        - by allowing a model to be very large, we will notice that the model performs worse compared to a simple leaner               model
+        
