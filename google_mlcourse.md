@@ -474,4 +474,4 @@ Test set and Training set methodology:
       - back propagation essentially allows us to do gradient descent in this non-convex optimization in a reasonably               efficient manner
       - neural networks are not necessarily always better than feature crosses, but neural networks do offer a flexible             alternative that works well in many cases
     
-  start from playground exercises
+      - increasing the number of neurons in a single hidden layer improves redundancy, and increases the chance of the model         converging towards a good model
