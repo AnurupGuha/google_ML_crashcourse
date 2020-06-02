@@ -482,3 +482,4 @@ Test set and Training set methodology:
         - by making a neural net large, with lots of neurons in hidden layers and more hidden layers, we have given the               model enough space to start overfitting on the noise in the training data set
         - by allowing a model to be very large, we will notice that the model performs worse compared to a simple leaner               model
         
+      - start from playground exercise: spiral
