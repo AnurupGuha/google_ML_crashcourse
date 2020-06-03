@@ -480,6 +480,12 @@ Test set and Training set methodology:
         - while adding the second hidden layer can still model the data set better than the first hidden layer alone, it               might make more sense to add more nodes to the first layer to let more lines be part of the kit from which the               second layer builds its shapes
         - a model with 1 neuron in the first hidden layer cannot learn a good model no matter how deep the neural net is
         - by making a neural net large, with lots of neurons in hidden layers and more hidden layers, we have given the               model enough space to start overfitting on the noise in the training data set
-        - by allowing a model to be very large, we will notice that the model performs worse compared to a simple leaner               model
+        - by allowing a model to be very large, we will notice that the model performs worse compared to a simple leaner               model        
+        - Even with neural nets, some amount of feature engineering is often neded to achieve best performance
+        - presence of high noise level in the data set may warrant the use a bit of feature engineering, which is a better             choice than adding more layers or more neurons per layer or tuning the parameters
         
-      - start from playground exercise: spiral
+     - loading csv files using pandas:
+        - train_df = pd.read_csv(".../name.csv")
+        - train_df = train_df.reindex(np.random.permutation(train_df.index)) #shuffles the data
+        - feature layer is the input layer in a neural network
+        
