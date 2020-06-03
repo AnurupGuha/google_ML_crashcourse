@@ -489,3 +489,4 @@ Test set and Training set methodology:
         - train_df = train_df.reindex(np.random.permutation(train_df.index)) #shuffles the data
         - feature layer is the input layer in a neural network
         
+     - start from the colab
