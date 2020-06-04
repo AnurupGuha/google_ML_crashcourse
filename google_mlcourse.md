@@ -488,5 +488,13 @@ Test set and Training set methodology:
         - train_df = pd.read_csv(".../name.csv")
         - train_df = train_df.reindex(np.random.permutation(train_df.index)) #shuffles the data
         - feature layer is the input layer in a neural network
+        - node and neuron are the same
         
-     - start from the colab
+     - Simple deep neural network
+       - before a deep neural network is created, a baseline loss is calculated by running a simple linear regression model          that uses the feature layer created before (why?)
+       - the topography of the deep neural network model is defined by calling the method tf.keras.layers.Dense
+          - argument unit specifies the number of nodes in a particular layer
+          - argument activation specifies activation function
+          - argument name is simply a name given to a specific hidden layer which helps in debugging
+       - tf.keras.model.fit method is used to train the model from the input features and labels
+       
