@@ -504,7 +504,15 @@ Test set and Training set methodology:
    - Training Neural Networks:
      - backpropagation is the most common training algorithm for neural networks
      - it makes gradient-descent possible for multilayer neural networks
+     - things need to be differentiable for us to be able to learn on them
+     - in general, we need differentiable functions to be able to learn from neural nets
      - TensorFlow automatically implements backpropagation
      - dynamic programming avoids computing many paths and only records intermediate results on the forward and backward            passes
+     - If our network get too deep, SNR gets bad as we go further and further down the model and learning can become quite          slow
+     - We should look for limiting the depth of our model to sort of the minimum effective depth if we can
+     - gradients can vanish
+     - gradients can explode
+       - if our learning rate is too high, we get these sort of crazy instabilities; we can get NaNs in our model
+     - its possible that in case of ReLu, if we end up with everything below the value of zero, there is no way for the              gradients to get propagated back through
      
      
