@@ -497,7 +497,14 @@ Test set and Training set methodology:
           - argument activation specifies activation function
           - argument name is simply a name given to a specific hidden layer which helps in debugging
        - tf.keras.model.fit method is used to train the model from the input features and labels
-       - L1 or L2 regularization is implemented on a hidden layer by specifying the "Kernel_regularizer"                argument in tf.keras.layers.Dense
-       - dropout regularization can be implemented as a separate layer between the hidden layers in the                topography
+       - L1 or L2 regularization is implemented on a hidden layer by specifying the "Kernel_regularizer"                              argument in tf.keras.layers.Dense
+       - dropout regularization can be implemented as a separate layer between the hidden layers in the                                topography
          - model.add(tf.keras.layers.Dropout(rate = 0.25))
-       
+         
+   - Training Neural Networks:
+     - backpropagation is the most common training algorithm for neural networks
+     - it makes gradient-descent possible for multilayer neural networks
+     - TensorFlow automatically implements backpropagation
+     - dynamic programming avoids computing many paths and only records intermediate results on the forward and backward            passes
+     
+     
