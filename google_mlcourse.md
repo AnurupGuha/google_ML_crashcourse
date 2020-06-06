@@ -516,6 +516,8 @@ Test set and Training set methodology:
        - if our learning rate is too high, we get these sort of crazy instabilities; we can get NaNs in our model
        - batch normalization and/or lowering the learning rate can help prevent exploding gradients
      - its possible that in case of ReLu, if we end up with everything below the value of zero, there is no way for the              gradients to get propagated back through
+       - once the weighted sum for a ReLU unit falls below 0, the ReLU unit can get stuck. It then outputs 0 activation,              contributing nothing to the networks output, and gradients can no longer flow through it during backpropagation
+       - lowering the learning rate can help prevent ReLUs from dying
      - during training, its often very useful for us to have normalized feature values when they come in
        - if things are on roughly the same scale, it helps to speed the conversions of neural networks
        - the exact value of the scale doesn't really matter, and it is often recommened to have -1 to +1 as an approximate            range
