@@ -511,8 +511,10 @@ Test set and Training set methodology:
      - If our network get too deep, SNR gets bad as we go further and further down the model and learning can become quite          slow
      - We should look for limiting the depth of our model to sort of the minimum effective depth if we can
      - gradients can vanish
+       - the ReLu activation function can help prevent vanishing gradients
      - gradients can explode
        - if our learning rate is too high, we get these sort of crazy instabilities; we can get NaNs in our model
+       - batch normalization and/or lowering the learning rate can help prevent exploding gradients
      - its possible that in case of ReLu, if we end up with everything below the value of zero, there is no way for the              gradients to get propagated back through
      - during training, its often very useful for us to have normalized feature values when they come in
        - if things are on roughly the same scale, it helps to speed the conversions of neural networks
