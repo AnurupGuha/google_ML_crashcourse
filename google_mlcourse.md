@@ -526,3 +526,4 @@ Test set and Training set methodology:
        - on different gradient steps, we repeat this and we take different nodes to dropout randomly
        - the more we do dropout, the stronger the regularization becomes
      
+  - start from multi-class neural networks
