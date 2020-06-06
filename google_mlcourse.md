@@ -514,5 +514,9 @@ Test set and Training set methodology:
      - gradients can explode
        - if our learning rate is too high, we get these sort of crazy instabilities; we can get NaNs in our model
      - its possible that in case of ReLu, if we end up with everything below the value of zero, there is no way for the              gradients to get propagated back through
+     - during training, its often very useful for us to have normalized feature values when they come in
+       - if things are on roughly the same scale, it helps to speed the conversions of neural networks
+       - the exact value of the scale doesn't really matter, and it is often recommened to have -1 to +1 as an approximate            range
+     - An important trick that is useful in training deep neural networks is the idea of an additional form of regularization        known as dropout
      
      
