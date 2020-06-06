@@ -518,5 +518,7 @@ Test set and Training set methodology:
        - if things are on roughly the same scale, it helps to speed the conversions of neural networks
        - the exact value of the scale doesn't really matter, and it is often recommened to have -1 to +1 as an approximate            range
      - An important trick that is useful in training deep neural networks is the idea of an additional form of regularization        known as dropout
-     
+       - when we are applying dropout, we are saying that with probability P we take a node and we essentially remove it from          the network for a single gradient step
+       - on different gradient steps, we repeat this and we take different nodes to dropout randomly
+       - the more we do dropout, the stronger the regularization becomes
      
