@@ -530,6 +530,7 @@ Test set and Training set methodology:
     - logistic regression, with a classification threshold, is very well suited for binary class classification problems 
     - we can build-off some of the technology for multi-class classification from binary class classification
       - one classic way of doing this is the one-versus-all multi class classification
+      - one-versus-all provides a way to leverage binary classification. Given a classification problem with N possible             solutions, a one-versus-all solution consists of N separate binary classifiers - one binary classifier for each             possible outcome. During training, the model runs through a sequence of binary classifiers, training each to answer         a separate classification question
       - essentially what we do is we have one logistic regression output node in our model for every possible class
       - we can do this in a deep neural network by having different output nodes at the outset of the model and share the           internal representation through rest of the model so these can be trained reasonably efficiently together
       - in cases where we know that an example will belong to only one class at a time, we would like to have the sum of the         probabilities of all the output nodes as equal to 1. This is achieved by using something called Softmax
