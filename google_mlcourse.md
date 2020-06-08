@@ -550,4 +550,6 @@ Test set and Training set methodology:
           - here Softmax calculates a probability for all positive labels and only only a random sample of negative labels
           - this is a bit more efficient at training time, and doesn't seem to hurt performance too much in many cases
           - at inference time, we need to still evaluate every single output node
-      - cases where an example is simultaneously a member of multiple classes, we must rely on multiple logistic regression 
+      - cases where an example is simultaneously a member of multiple classes, we must rely on multiple logistic regression
+      
+    - start from MNIST programming exercise
