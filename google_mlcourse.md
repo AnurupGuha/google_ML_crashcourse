@@ -535,6 +535,9 @@ Test set and Training set methodology:
       - we can do this in a deep neural network by having different output nodes at the outset of the model and share the           internal representation through rest of the model so these can be trained reasonably efficiently together
       - in cases where we know that an example will belong to only one class at a time, we would like to have the sum of the         probabilities of all the output nodes as equal to 1. This is achieved by using something called Softmax
       - Softmax is the generalization of the same logistic regression we used, by generalized to more than one class
+        - remember that, logistic regression produces a decimal between 0  and 1.0
+        - Softmax extends this idea into a multi-class world
+          - Softmax assigns decimal probabilities to each class in a multi-class problem. These decimal probabilities must               add to 1. This additional constraint helps traning converge faster
       - when we have a single label multi-class classification problem, we use Softmax
         - this encodes some helpful structure to the problem, and allows us to use the outputs as well-calibrated                     probabilities
       - in case of multi-label classification problem, we do need to use a one-versus-all classification strategy, where             each output is computed independently, and the outputs do not necessarily sum up to 1
