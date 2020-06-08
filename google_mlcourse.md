@@ -538,6 +538,7 @@ Test set and Training set methodology:
         - remember that, logistic regression produces a decimal between 0  and 1.0
         - Softmax extends this idea into a multi-class world
           - Softmax assigns decimal probabilities to each class in a multi-class problem. These decimal probabilities must               add to 1. This additional constraint helps traning converge faster
+        - Softmax is implemented through a neural network layer just before the output layer. This layer (the Softmax layer)           must have same number of nodes as the output layer
       - when we have a single label multi-class classification problem, we use Softmax
         - this encodes some helpful structure to the problem, and allows us to use the outputs as well-calibrated                     probabilities
       - in case of multi-label classification problem, we do need to use a one-versus-all classification strategy, where             each output is computed independently, and the outputs do not necessarily sum up to 1
@@ -546,6 +547,7 @@ Test set and Training set methodology:
           - relatively expensive to train
         - we can be bit more efficient by doing something called candidate sampling
           - we train the output nodes for the class that it belongs to and then we take a sample of the negative classes and             only update a sample of the output nodes
+          - here Softmax calculates a probability for all positive labels and only only a random sample of negative labels
           - this is a bit more efficient at training time, and doesn't seem to hurt performance too much in many cases
           - at inference time, we need to still evaluate every single output node
-          
+      - cases where an example is simultaneously a member of multiple classes, we must rely on multiple logistic regression 
