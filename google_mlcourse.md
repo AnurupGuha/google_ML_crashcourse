@@ -526,4 +526,22 @@ Test set and Training set methodology:
        - on different gradient steps, we repeat this and we take different nodes to dropout randomly
        - the more we do dropout, the stronger the regularization becomes
      
-  - start from multi-class neural networks
+  - Multi-class neural networks
+    - logistic regression, with a classification threshold, is very well suited for binary class classification problems 
+    - we can build-off some of the technology for multi-class classification from binary class classification
+      - one classic way of doing this is the one-versus-all multi class classification
+      - essentially what we do is we have one logistic regression output node in our model for every possible class
+      - we can do this in a deep neural network by having different output nodes at the outset of the model and share the           internal representation through rest of the model so these can be trained reasonably efficiently together
+      - in cases where we know that an example will belong to only one class at a time, we would like to have the sum of the         probabilities of all the output nodes as equal to 1. This is achieved by using something called Softmax
+      - Softmax is the generalization of the same logistic regression we used, by generalized to more than one class
+      - when we have a single label multi-class classification problem, we use Softmax
+        - this encodes some helpful structure to the problem, and allows us to use the outputs as well-calibrated                     probabilities
+      - in case of multi-label classification problem, we do need to use a one-versus-all classification strategy, where             each output is computed independently, and the outputs do not necessarily sum up to 1
+      - when we are training multi-class classification problem, we can use either:
+        - full Softmax
+          - relatively expensive to train
+        - we can be bit more efficient by doing something called candidate sampling
+          - we train the output nodes for the class that it belongs to and then we take a sample of the negative classes and             only update a sample of the output nodes
+          - this is a bit more efficient at training time, and doesn't seem to hurt performance too much in many cases
+          - at inference time, we need to still evaluate every single output node
+          
