@@ -552,4 +552,21 @@ Test set and Training set methodology:
           - at inference time, we need to still evaluate every single output node
       - cases where an example is simultaneously a member of multiple classes, we must rely on multiple logistic regression
       
-    - start from MNIST programming exercise
+    - MNIST programming exercise
+      - a rater is a human who assigns labels in examples
+      - MNIST training set consists of 60000 examples
+      - MNIST test set consists of 10000 examples
+      - each example contains a pixel map showing how a person wrote a digit (0 - 9)
+      - the digit is represented in a 28x28 pixel map (after the input data is normalized)
+      - each pixel is an interger between 0 and 255
+      - the pixel values are on a gray scale in which 0 represents white, 255 represents black, and values between 0  and           255 represents various shades of gray
+      - this is a multi-class classification problem with 10 output classes, one for each digit
+      - tf.keras provides a set of convenience functions for loading well-known datasets
+        - convenience function for MNIST is called mnist.load_data()
+          - tf.keras.datasets.mnist.load_data()
+        - mnist.load_data() returns four separate values:
+          - x_train contains the training set's features
+          - y_train contains the training set's labels
+          - x_test contains the test set's features
+          - x_test contains the test set's labels
+        - MNIST.csv training set is already shiffled
