@@ -584,3 +584,5 @@ Test set and Training set methodology:
           - the activation function of the output layer is softmax, which will yeild 10 different outputs for each example
           - each of the 10 outputs provides the probability that the input example is a certain digit
         - Note that the loss function for multi-class classification is different than the loss function for binary                  classification
+        
+        - continue with the Task 2: optimizing the model
