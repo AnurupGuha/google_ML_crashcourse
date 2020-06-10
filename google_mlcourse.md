@@ -534,7 +534,7 @@ Test set and Training set methodology:
       - essentially what we do is we have one logistic regression output node in our model for every possible class
       - we can do this in a deep neural network by having different output nodes at the outset of the model and share the           internal representation through rest of the model so these can be trained reasonably efficiently together
       - in cases where we know that an example will belong to only one class at a time, we would like to have the sum of the         probabilities of all the output nodes as equal to 1. This is achieved by using something called Softmax
-      - Softmax is the generalization of the same logistic regression we used, by generalized to more than one class
+      - Softmax is the generalization of the same logistic regression we used, by generalizing to more than one class
         - remember that, logistic regression produces a decimal between 0  and 1.0
         - Softmax extends this idea into a multi-class world
           - Softmax assigns decimal probabilities to each class in a multi-class problem. These decimal probabilities must               add to 1. This additional constraint helps traning converge faster
@@ -570,3 +570,17 @@ Test set and Training set methodology:
           - x_test contains the test set's features
           - x_test contains the test set's labels
         - MNIST.csv training set is already shiffled
+        - the .csv file for MNIST dataset does not contain column names
+        - instead of column names, we use ordinal numbers to access different subsets of the MNIST dataset
+        - it is probably best to think of x_train and x_test as three-dimensional NumPy array
+          - # output example #2917 of the training set:
+            - x_train[2917]
+          - you can call matplotlib.pyplot.imshow to interpret the preceding numeric array as an image:
+            - plt.imshow(x_train[2917])  # using false colors to visualize the array
+            - x_train[2917][10]          # output row #10 of example #2917
+            - x_train[2917][10][16]      # output pixel 16 of row # 10 of example #2917
+          - ceate_model function defines the topography of the deep neural network, specifying the number of layers, number               of nodes in each layer, and any regularization
+          - creat_model function also defines the activation function of each layer
+          - the activation function of the output layer is softmax, which will yeild 10 different outputs for each example
+          - each of the 10 outputs provides the probability that the input example is a certain digit
+        - Note that the loss function for multi-class classification is different than the loss function for binary                  classification
