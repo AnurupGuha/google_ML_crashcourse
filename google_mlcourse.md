@@ -585,4 +585,5 @@ Test set and Training set methodology:
           - each of the 10 outputs provides the probability that the input example is a certain digit
         - Note that the loss function for multi-class classification is different than the loss function for binary                  classification
         
-        - continue with the Task 2: optimizing the model
+        - Optimizing the model:
+          -
