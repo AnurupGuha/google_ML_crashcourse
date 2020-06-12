@@ -586,4 +586,17 @@ Test set and Training set methodology:
         - Note that the loss function for multi-class classification is different than the loss function for binary                  classification
         
         - Optimizing the model:
-          -
+          -   #plt.figure()
+              #plt.xlabel("Epoch")
+              #plt.ylabel("Value")
+               plt.plot(history.history['accuracy'])
+               plt.plot(history.history['val_accuracy'])
+               plt.title('model accracy')
+               plt.ylabel('accuracy')
+               plt.xlabel('epoch')
+               plt.legend(['train','val'], loc='upper left')
+               plt.show()
+               print("Loaded the plot_curve function.")
+             - https://machinelearningmastery.com/learning-curves-for-diagnosing-machine-learning-model-performance/
+        
+        - start from embeddings
