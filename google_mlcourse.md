@@ -631,5 +631,6 @@ Test set and Training set methodology:
      - embeddings give machine learning systems opportunities to detect patterns that may help with the learning task
      - Categorical data refers to input features that represent one or more discrete items from a finite set. For example,          it can be the set of movies a user has watched
      - categorical data is most efficiently represented via sparse tensors, which are tensors with very few elements which          are non-zero
-     - 
+     
+     - start from obtaining embeddings 
      
