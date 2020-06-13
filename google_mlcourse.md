@@ -599,4 +599,17 @@ Test set and Training set methodology:
                print("Loaded the plot_curve function.")
              - https://machinelearningmastery.com/learning-curves-for-diagnosing-machine-learning-model-performance/
         
-        - start from embeddings
+   - Embeddings:
+     - one of the things fundamental to recommendation systems is embeddings
+     - there is no separate training needed to learn embeddings
+     - the same backpropagation will be used as before
+     - embedding layer is just a hidden layer and will can have one unit for every dimension you want in the embedding
+     - intuitively, these hidden units are learning how to organize data in a way to organize whatever metric we have              decided to put as the final objective of the network
+     - classic way of collaborative filtering output is to have a matrix where a row is for a user and a column is for a            movie (for example), and a check indicates that a user has watched a specific movie
+       - each example is one row of this matrix
+       - to use in TensorFlow:
+         - first we will create a dictionary, which is a mapping from each feature(in this case each movie) to an integer              from 0 to 'no. of movies - 1'
+         - sparse embedding is done where information which is not zero is the only one stored 
+       
+       - number of units in the hidden layer for embeddings represents the embedding dimensionality
+     - supervised information is going to allow us to tailor these embeddings for whichever tasks we are after
