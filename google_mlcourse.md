@@ -613,3 +613,15 @@ Test set and Training set methodology:
        
        - number of units in the hidden layer for embeddings represents the embedding dimensionality
      - supervised information is going to allow us to tailor these embeddings for whichever tasks we are after
+     - there can be other input features which directly to standard hidden layers without interefering with the hidden layer
+       for the embeddings
+     - there is another layer known as the Logit layer which is between the last hidden layer and softmax
+     - the weights for each of the edges conncecting one node from the input layer to each the hidden layer units of an            embedding layer, are the embeddings
+     - the hyperparameter here is the number of units (dimensions) in the embedding hidden layer
+     - higher dimensions are good as it allows us to more accurately represent relationships between the input values, but          more dimensions lead to increase in the chances of overfitting, slows down training and need for more data
+     - an embedding can be though of as a tool where we map items to low-dimensional real vectors in a way that similar            items are nearby
+     - we can also apply embeddings to dense data, and learn a similarity metric among them
+     - an embedding space is the space where we map the inputs 
+     - this space can be of d-dimensions, known as d-dimensional embedding. Here each input feature is represented by a d          number of real-valued numbers
+     - often, each dimension is called latent dimension, as it represents a feature that is not explicit in the data but            rather inferred from it
+     - ultimately, it is the relative distance between the features in the embedded space that matters
