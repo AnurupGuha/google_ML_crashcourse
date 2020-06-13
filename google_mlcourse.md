@@ -601,6 +601,7 @@ Test set and Training set methodology:
         
    - Embeddings:
      - one of the things fundamental to recommendation systems is embeddings
+     - embeddings translate large sparse vectors into a lower-dimensional space that preserves semantic relationships
      - there is no separate training needed to learn embeddings
      - the same backpropagation will be used as before
      - embedding layer is just a hidden layer and will can have one unit for every dimension you want in the embedding
@@ -625,3 +626,7 @@ Test set and Training set methodology:
      - this space can be of d-dimensions, known as d-dimensional embedding. Here each input feature is represented by a d          number of real-valued numbers
      - often, each dimension is called latent dimension, as it represents a feature that is not explicit in the data but            rather inferred from it
      - ultimately, it is the relative distance between the features in the embedded space that matters
+     - Categorical data refers to input features that represent one or more discrete items from a finite set. For example,          it can be the set of movies a user has watched
+     - categorical data is most efficiently represented via sparse tensors, which are tensors with very few elements which          are non-zero
+     -
+     
