@@ -606,6 +606,8 @@ Test set and Training set methodology:
      - the same backpropagation will be used as before
      - embedding layer is just a hidden layer and will can have one unit for every dimension you want in the embedding
      - intuitively, these hidden units are learning how to organize data in a way to organize whatever metric we have              decided to put as the final objective of the network
+     - an embedding is a matrix in which each column is the vector that corresponds to an item in the vocabulary (like a            movie amongs a collection)
+     - to get the dense vector for a single vocabulary item, we retrieve the column corresponding to that item
      - classic way of collaborative filtering output is to have a matrix where a row is for a user and a column is for a            movie (for example), and a check indicates that a user has watched a specific movie
        - each example is one row of this matrix
        - to use in TensorFlow:
@@ -626,7 +628,8 @@ Test set and Training set methodology:
      - this space can be of d-dimensions, known as d-dimensional embedding. Here each input feature is represented by a d          number of real-valued numbers
      - often, each dimension is called latent dimension, as it represents a feature that is not explicit in the data but            rather inferred from it
      - ultimately, it is the relative distance between the features in the embedded space that matters
+     - embeddings give machine learning systems opportunities to detect patterns that may help with the learning task
      - Categorical data refers to input features that represent one or more discrete items from a finite set. For example,          it can be the set of movies a user has watched
      - categorical data is most efficiently represented via sparse tensors, which are tensors with very few elements which          are non-zero
-     -
+     - 
      
