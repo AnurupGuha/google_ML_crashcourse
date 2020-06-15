@@ -626,11 +626,18 @@ Test set and Training set methodology:
      - we can also apply embeddings to dense data, and learn a similarity metric among them
      - an embedding space is the space where we map the inputs 
      - this space can be of d-dimensions, known as d-dimensional embedding. Here each input feature is represented by a d          number of real-valued numbers
+     - when learning a d-dimensional embedding, each item is mapped to a point in a d-dimensional space so that the similar        items are nearby in this space
      - often, each dimension is called latent dimension, as it represents a feature that is not explicit in the data but            rather inferred from it
      - ultimately, it is the relative distance between the features in the embedded space that matters
      - embeddings give machine learning systems opportunities to detect patterns that may help with the learning task
      - Categorical data refers to input features that represent one or more discrete items from a finite set. For example,          it can be the set of movies a user has watched
      - categorical data is most efficiently represented via sparse tensors, which are tensors with very few elements which          are non-zero
      
-     - start from obtaining embeddings 
-     
+     - Obtaining embeddings:
+       - there are existing mathematical techniques for capturing the important structure of a high-dimensional space in a            low-dimensional space.
+       - for example, principal component analysis (PCA) has been used to create word embeddings
+         - PCA tries to find highly correlated dimensions that can be collapsed into a single-dimension
+       - Word2vec is an algorithm invented at Google for training word embeddings
+         - it maps semantically similar words to geometrically close embeddings
+       - Word2vec relies on distributional hypothesis, which means that words which often have the same neighbouring words            tend to be semantically similar
+       
