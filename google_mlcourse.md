@@ -657,3 +657,5 @@ Test set and Training set methodology:
      - a dynamic model is trained online. Data is continually entering the system and continuously updating the model
        - a model that is trained online is more appropriate for situations where in fact there are trends and seasonalities          that change quite often with time and we want to make sure that the model is up do date
      - even with static training, we still should monitor the input data for any change
+
+   - start from static versus dynamic inference
