@@ -640,4 +640,20 @@ Test set and Training set methodology:
        - Word2vec is an algorithm invented at Google for training word embeddings
          - it maps semantically similar words to geometrically close embeddings
        - Word2vec relies on distributional hypothesis, which means that words which often have the same neighbouring words            tend to be semantically similar
-       
+     
+   - Production ML systems:
+     - a full machine learning system includes many components that are not about training
+     - for example, we need to have data collection, feature extraction, data verification, and various forms of monitoring        and data analysis
+     - ML code is at the heart of a real-world ML production system, but it often represents only 5% or less of the overall        code of that total ML production system
+     - An ML production system devotes considerable resources to input data - collecting it, verifying it, and extracting          features from it
+     - TensorFlow Extended (TFX) is an end-to-end platform for deploying production ML pipelines
+   
+   - Static versus Dynamic Training:
+     - a static model is trained offline. The model is trained exactly once and then use the trained model for a while
+       - easier to build and test
+       - monitoring requirement at training time are more modest for offline training
+       - a good place to use offline training is when our data is not going to change much over time
+       - for example, large image recognition model
+     - a dynamic model is trained online. Data is continually entering the system and continuously updating the model
+       - a model that is trained online is more appropriate for situations where in fact there are trends and seasonalities          that change quite often with time and we want to make sure that the model is up do date
+     - even with static training, we still should monitor the input data for any change
