@@ -667,3 +667,6 @@ Test set and Training set methodology:
      - for online scoring, remember that we are putting that model into a server and then querying that server on demand
      - online scoring may suffer from latency issues
      - for online scoring, if our model is expensive to compute, we then might have to through a large amount of production        level resources at our jobs which can be expensive
+     - Dynamic (online) inference can provide predictions for all possible items. Any request that comes in will be given a        score.
+     - online inference handles long-tail distributions (those with many rare items)
+     - online inference needs careful monitoring of input signals
