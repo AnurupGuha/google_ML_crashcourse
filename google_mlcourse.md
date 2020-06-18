@@ -658,4 +658,12 @@ Test set and Training set methodology:
        - a model that is trained online is more appropriate for situations where in fact there are trends and seasonalities          that change quite often with time and we want to make sure that the model is up do date
      - even with static training, we still should monitor the input data for any change
 
-   - start from static versus dynamic inference
+   - Static versus Dynamic inference:
+     - inference means making predictions
+     - an important design consideration when designing machine learning systems, is whether we do inference in an online or        offline fashion
+     - if we are doing offline scoring, we get a really nice opportunity to do post-prediction validation
+     - in offline inference, once the predictions have been written to some look-up table, they can be served with minimal        latency. No feature computation or model inference needs to be done at request time
+     - the drawback to offline scoring is that we need to have all of our examples in hand at the time we are doing                predictions
+     - for online scoring, remember that we are putting that model into a server and then querying that server on demand
+     - online scoring may suffer from latency issues
+     - for online scoring, if our model is expensive to compute, we then might have to through a large amount of production        level resources at our jobs which can be expensive
