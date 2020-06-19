@@ -675,8 +675,8 @@ Test set and Training set methodology:
      - we want to include as few data dependencies as we can
      - by data dependencies, we mean the input features we use for training and prediction
      - our input features are important because they determine our system behavior. If input features change, the system            behavior will change as well
-     - in software engineering, we know how to test code. features basically take the place of code in our machine learning        systems
+     - In traditional software development, one focuses more on code than on data. In machine learning development, although        coding is still part of the job, our focus must widen to include data. In ML projects, we should not only validate          our code, we must also continuously test, verify, and monitor input data     
      - randomness is an important strategy to tease apart the correlations between input features
      - we would like to make sure that we don't have non-stationarity in our system
      - the easiest way to get non-stationarity is to have our input data depend on the outputs of our model
-     - 
+     - Sometimes a model can affect its own training data. For example, the results from some models, in turn, are directly        or indirectly input features to the same model. Sometimes, a model can affect another model
