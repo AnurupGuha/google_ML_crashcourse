@@ -680,3 +680,5 @@ Test set and Training set methodology:
      - we would like to make sure that we don't have non-stationarity in our system
      - the easiest way to get non-stationarity is to have our input data depend on the outputs of our model
      - Sometimes a model can affect its own training data. For example, the results from some models, in turn, are directly        or indirectly input features to the same model. Sometimes, a model can affect another model
+     
+   - start from Fairness 
