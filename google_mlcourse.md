@@ -671,4 +671,12 @@ Test set and Training set methodology:
      - online inference handles long-tail distributions (those with many rare items)
      - online inference needs careful monitoring of input signals
      
-   - start from data dependencies
+   - Data Dependencies:
+     - we want to include as few data dependencies as we can
+     - by data dependencies, we mean the input features we use for training and prediction
+     - our input features are important because they determine our system behavior. If input features change, the system            behavior will change as well
+     - in software engineering, we know how to test code. features basically take the place of code in our machine learning        systems
+     - randomness is an important strategy to tease apart the correlations between input features
+     - we would like to make sure that we don't have non-stationarity in our system
+     - the easiest way to get non-stationarity is to have our input data depend on the outputs of our model
+     - 
