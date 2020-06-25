@@ -681,4 +681,13 @@ Test set and Training set methodology:
      - the easiest way to get non-stationarity is to have our input data depend on the outputs of our model
      - Sometimes a model can affect its own training data. For example, the results from some models, in turn, are directly        or indirectly input features to the same model. Sometimes, a model can affect another model
      
-   - start from Fairness 
+   - Fairness:
+     - it is necessary to evaluate training data and evaluate predictions for bias
+     - human biases can creep in machine learning systems. It is necessary to identify and mitigate them throughout the development process
+     - human bias include cognitive blindspot
+     - In a typical machine learning paradigm, one starts out with training the data. The data is collected and annotated. From that, a model is trained.Data          is filtered, ranked, and outputs are generated.
+       - we may think that this is a relatively clean pipeline, but it may have different types of biases affecting it under the hood
+     - machine learning models are not necessarily objective. engineers train models by training them a data set of training examples, and human involvement in       the provision and curation of this data can make a model's predictions susceptible to bias
+     - we need to train our models to account for bias
+     - we need to identify the implicit assumptions the model maybe making
+     - 
