@@ -690,4 +690,7 @@ Test set and Training set methodology:
      - machine learning models are not necessarily objective. engineers train models by training them a data set of training examples, and human involvement in       the provision and curation of this data can make a model's predictions susceptible to bias
      - we need to train our models to account for bias
      - we need to identify the implicit assumptions the model maybe making
+     - any sort of skew in our data, where certain group or characteristics may be under- or over-represented relative to their real-world prevalence, can            introduce bias in our model
+     - when evaluating a model, metrics calculated against an entire test or validation set don't always give an accurate picture of how fair the model is
+       - using metrics on the subsets of a set gives better understanding of the biases
      - 
