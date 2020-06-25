@@ -693,4 +693,6 @@ Test set and Training set methodology:
      - any sort of skew in our data, where certain group or characteristics may be under- or over-represented relative to their real-world prevalence, can            introduce bias in our model
      - when evaluating a model, metrics calculated against an entire test or validation set don't always give an accurate picture of how fair the model is
        - using metrics on the subsets of a set gives better understanding of the biases
-     - 
+     - FairAware tasks help contextualize ML processes in terms of fairness
+     
+     -  start from the exercise
