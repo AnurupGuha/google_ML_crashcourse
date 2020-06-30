@@ -695,4 +695,13 @@ Test set and Training set methodology:
        - using metrics on the subsets of a set gives better understanding of the biases
      - FairAware tasks help contextualize ML processes in terms of fairness
      
-     -  start from the exercise
+     - Exercise:
+       - FairAware tasks provide opportunities to contextualize ML processes with respect to fairness
+       - Facets is an open-source tool created by PAIR that contains two robust visualizations to aid in understanding and analyzing ML datasets
+       - important aspects to consider when auditing a dataset for fairness:
+         - are there missing feature values for a large number of observations?
+         - are these missing feature values affecting other features?
+         - are there unexpected feature values?
+         - what is the sign of data skew?
+       - Facets Overview is an interactive visualization tool that can help us explore the dataset and we can quickly analyze the distribution of values a              given dataset
+       -
