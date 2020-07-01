@@ -719,5 +719,7 @@ Test set and Training set methodology:
        - we have to convert high-dimensional categorical features into a low-dimensional and dense real-valued vector, which we call an embedding vector
          - indicator_column (think of it as one-hot encoding) and embedding_column (converts sparse features into dense features) help us streamline the                  process
        - feed-forward neural network with two hidden layers
+       - bucketing a feature involves converting a numerical feature to a categorical feature
+         - age_buckets = tf.feature_column.bucketized_column(age, boundaries=[18,25,30,35,40,45,50,55,60,65])
        
-       - start from Define Deep Neural Net Model
+
