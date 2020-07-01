@@ -719,3 +719,5 @@ Test set and Training set methodology:
        - we have to convert high-dimensional categorical features into a low-dimensional and dense real-valued vector, which we call an embedding vector
          - indicator_column (think of it as one-hot encoding) and embedding_column (converts sparse features into dense features) help us streamline the                  process
        - feed-forward neural network with two hidden layers
+       
+       - start from Define Deep Neural Net Model
