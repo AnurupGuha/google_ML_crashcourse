@@ -711,3 +711,11 @@ Test set and Training set methodology:
          - to use Facet Dive, we need to convert the data to JSON array. The DataFrame method to_json() takes care of this
        - plotting histograms, ranking most-to-least common examples, identifying duplicate or missing examples, making sure the training and test sets are              similar, computing feature quantiles - these are all critical analyses to perform on your data
        - the better we know what is going on in our data, the more insight we will have as to where unfairness might creep in
+       - we will use TensorFlow's Keras API (specifically, tf.keras.Sequential) to construct our neural network model
+         - tf.keras.Sequential does not accept a pandas DataFrame as a data type
+         - its quite trivial to convert a pandas DataFrame into a Numpy array, which is an accepted data type
+         - TensorFlow requires that data maps to a model. This is accomplished by using tf.feature_columns to ingest and represent features in TensorFlow
+       - when we want our models to mitigate, or leverage, the learned signal of a characteristic pertaining to a sub-group, we will want to use different              kinds of tools and techniques, most of which are still actively being researched and developed
+       - we have to convert high-dimensional categorical features into a low-dimensional and dense real-valued vector, which we call an embedding vector
+         - indicator_column (think of it as one-hot encoding) and embedding_column (converts sparse features into dense features) help us streamline the                  process
+       - feed-forward neural network with two hidden layers
