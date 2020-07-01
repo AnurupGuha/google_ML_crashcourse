@@ -708,3 +708,6 @@ Test set and Training set methodology:
          - pandas.DataFrame.dropna(how="any", axis=0, inplace=True)
          - we will use this method prior to traning a model when we convert a Pandas DataFrame to a Numpy array
        - To further explore the dataset, we can use Facets Dive, a tool that provides an interactive interface where each individual item in the visualization          represents a datapoint
+         - to use Facet Dive, we need to convert the data to JSON array. The DataFrame method to_json() takes care of this
+       - plotting histograms, ranking most-to-least common examples, identifying duplicate or missing examples, making sure the training and test sets are              similar, computing feature quantiles - these are all critical analyses to perform on your data
+       - the better we know what is going on in our data, the more insight we will have as to where unfairness might creep in
