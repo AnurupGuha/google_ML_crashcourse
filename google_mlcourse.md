@@ -704,4 +704,7 @@ Test set and Training set methodology:
          - are there unexpected feature values?
          - what is the sign of data skew?
        - Facets Overview is an interactive visualization tool that can help us explore the dataset and we can quickly analyze the distribution of values a              given dataset
-       -
+       - In Pandas, there is a convenient way to drop any row containing a missing value in the data set:
+         - pandas.DataFrame.dropna(how="any", axis=0, inplace=True)
+         - we will use this method prior to traning a model when we convert a Pandas DataFrame to a Numpy array
+       - To further explore the dataset, we can use Facets Dive, a tool that provides an interactive interface where each individual item in the visualization          represents a datapoint
