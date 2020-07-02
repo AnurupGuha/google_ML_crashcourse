@@ -729,7 +729,14 @@ Test set and Training set methodology:
            - true positive; true negative; false positive; false negative;
          - if desired, we can use the number of outcomes in each of these states to calculate secondary evaluation metrics such as precision and recall
          
-         - start from ML systems in the real world
+     - ML Guidelines:
+       - When you are going off to create a ML system, please keep the very first model extremely simple
+       - A simple linear model is a good place to start so that we can verify the pipeline correctness
+       - You want to make sure that the data pipeline is in fact fully correct, end-to-end, before doing any iteration on model quality, because bugs in the data          pipeline is extremely hard to track down later on
+       - You want to use a simple observable metric as your first thing to use for training and evaluation, so that you can verify that the model is behaving as          expected
+       - You want to own and monitor your input features as much as possible
+       - You want to treat your model configuration as a code and make sure that any time you configure your model, that it is reviewed by a teammate and                  checked in
+       - make sure to write down the results of all your experiments, even failures: documentation is very important for later debugging
          
        
 
