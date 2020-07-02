@@ -721,5 +721,15 @@ Test set and Training set methodology:
        - feed-forward neural network with two hidden layers (light architecture)
        - bucketing a feature involves converting a numerical feature to a categorical feature
          - age_buckets = tf.feature_column.bucketized_column(age, boundaries=[18,25,30,35,40,45,50,55,60,65])
+       - when evaluating a model for fairness, its important to determine whether prediction errors are uniform across subgroups or whether certain subgroups            are more susceptible to certain prediction errors than others
+       - A key tool for comparing the prevalence of different types of model errors is a confusion matrix
+         - a confusion matrix is a grid that plots predictions versus ground truth for our model, and tabulates statistics summarizing how often our model made            the correct prediction and how often it made the wrong prediction
+         - cases where the model makes the correct prediction are classified as true, and cases where the model makes the wrong prediction are classified as              false
+         - our confusion matrix thus represents four possible states:
+           - true positive; true negative; false positive; false negative;
+         - if desired, we can use the number of outcomes in each of these states to calculate secondary evaluation metrics such as precision and recall
+         
+         - start from ML systems in the real world
+         
        
 
