@@ -11,7 +11,7 @@
    - prediction function (model) gets trained using the identified labels
    - prediction function is a mapping between the features and the labels
    - through training, the weights and baises in the prediction function get optimized to minimize loss function
-   - the minimization happens through what is usually known as ML algorithms (?)
+   - the minimization happens through what are usually known as ML algorithms (?)
  - Inference
 -Regression vs Classification :
 
